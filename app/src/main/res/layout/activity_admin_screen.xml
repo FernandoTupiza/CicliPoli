@@ -13,19 +13,17 @@
         android:orientation="vertical">
 
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listaUsuarios2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="550px"
+            android:layout_marginBottom="150px" />
 
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/listaUsuarios2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="550px"
-                android:layout_marginBottom="150px" />
+    </RelativeLayout>
 
-
-        </RelativeLayout>
-
-        <LinearLayout
+    <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -177,6 +175,16 @@
                 android:layout_marginHorizontal="10px"
                 android:layout_weight="1"
                 android:backgroundTint="#ED6484"
+                app:icon="@drawable/ic_baseline_logout_24"
+                app:iconGravity="textTop" />
+
+            <Button
+                android:id="@+id/signOut3"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="10px"
+                android:layout_weight="1"
+                android:backgroundTint="#4CAF50"
                 app:icon="@drawable/ic_baseline_logout_24"
                 app:iconGravity="textTop" />
 
