@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -28,6 +29,7 @@ public class AdminScreen extends AppCompatActivity {
     TextView nameUser;
     TextView lastNameUser;
     TextView emailUser;
+    Button signOut;
     Ciclista userMainApp;
     Button newAdd;
     @SuppressLint("MissingInflatedId")
@@ -40,6 +42,7 @@ public class AdminScreen extends AppCompatActivity {
         lastNameUser = findViewById(R.id.itemLastName2);
         emailUser = findViewById(R.id.itemEmail2);
         newAdd = findViewById(R.id.addAdmin);
+        signOut = findViewById(R.id.signOut);
 
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -49,6 +52,17 @@ public class AdminScreen extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 changeThePage();
+            }
+        });
+
+        signOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FirebaseAuth.getInstance().signOut();
+                Intent intent = new Intent(AdminScreen.this, LoginScreen.class);
+                startActivity(intent);
+
+
             }
         });
     }
