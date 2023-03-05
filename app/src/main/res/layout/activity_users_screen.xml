@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UsersScreen">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listaUsuarios"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="550px"
+            android:layout_marginBottom="150px"
+            />
+
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="470px"
+                    android:gravity="center"
+                    android:orientation="vertical"
+
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        >
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginHorizontal="30px"
+
+                            >
+                            <TextView
+                                android:id="@+id/textView8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Nombre:"
+                                android:layout_marginRight="30px"
+
+                                />
+
+                            <TextView
+                                android:id="@+id/itemName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="20px"
+                            >
+                            <TextView
+                                android:id="@+id/textView9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Apellido:"
+
+
+                                android:layout_marginRight="20px"
+                                />
+                            <TextView
+                                android:id="@+id/itemLastName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        >
+                        <TextView
+                            android:id="@+id/textView10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Email:"
+                            android:layout_marginRight="20px"
+                            />
+                        <TextView
+                            android:id="@+id/itemEmail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        >
+                        <Button
+                            android:id="@+id/changeNext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="10px"
+                            android:layout_marginVertical="1dp"
+                            android:backgroundTint="#5BCFD3"
+                            android:text="Mi Ubicación actual"
+                            android:textSize="30px"
+                            app:icon="@drawable/ic_baseline_gps_fixed_24">
+
+
+                        </Button>
+                        <Button
+                            android:id="@+id/locationAlls"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="10px"
+                            android:layout_marginVertical="20px"
+                            android:backgroundTint="#358FD6"
+                            android:text="REGISTRO CICLISTAS"
+                            android:textSize="30px"
+                            app:icon="@drawable/ic_baseline_gps_fixed_24">
+
+
+                        </Button>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="50px"
+                        android:text="Ver Usuarios"
+                        >
+
+                    </TextView>
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200px"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+
+
+        >
+        <Button
+            android:id="@+id/startServices"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="10px"
+            android:layout_weight="1"
+            android:backgroundTint="#8DCF90"
+            app:icon="@drawable/ic_baseline_gps_fixed_24"
+            app:iconGravity="textTop" />
+        <Button
+            android:id="@+id/signOut"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="10px"
+            android:backgroundTint="#ED6484"
+            android:layout_weight="1"
+            app:icon="@drawable/ic_baseline_logout_24"
+            app:iconGravity="textTop"
+             />
+        <Button
+            android:id="@+id/endServices"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="10px"
+            android:layout_weight="1"
+            android:backgroundTint="#EF8E70"
+            app:icon="@drawable/ic_baseline_gps_off_24"
+            app:iconGravity="textTop" />
+
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>

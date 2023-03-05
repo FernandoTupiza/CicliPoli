@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "297141501130",
+    "firebase_url": "https://moviles-clycleepn-default-rtdb.firebaseio.com",
+    "project_id": "moviles-clycleepn",
+    "storage_bucket": "moviles-clycleepn.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:297141501130:android:3cefa844faad8e8b014833",
+        "android_client_info": {
+          "package_name": "com.example.proyectomapsmovil"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "297141501130-hvq7v9ul3o77hc77rkvhdt6d80sihco4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.proyectomapsmovil",
+            "certificate_hash": "889bbe0bf4e63c7507b953443416649b7de60862"
+          }
+        },
+        {
+          "client_id": "297141501130-o7dll8m012cvdpa8t7iu04upp6mnjrr3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAr9DsdqrlreI_EykUArm3aXS3Yi291bbM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "297141501130-o7dll8m012cvdpa8t7iu04upp6mnjrr3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
