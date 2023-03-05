@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:animateLayoutChanges="true"
+    app:cardCornerRadius="20px"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#DFDBF8"
+            android:orientation="horizontal"
+            android:padding="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="370px"
+                    android:backgroundTint="#C88181"
+                    android:gravity="center"
+
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="20px"
+                            android:orientation="horizontal"
+
+                            >
+
+                            <TextView
+                                android:id="@+id/textView8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="20px"
+                                android:text="Nombre:"
+
+                                />
+
+                            <TextView
+                                android:id="@+id/itemName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="David" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="20px">
+
+                            <TextView
+                                android:id="@+id/textView9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="20px"
+
+
+                                android:text="Apellido:" />
+
+                            <TextView
+                                android:id="@+id/itemLastName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Cacuango" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/textView10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="20px"
+                            android:text="Email:" />
+
+                        <TextView
+                            android:id="@+id/itemEmail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="cacuangodarwin1999@gmail.com" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/textView11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="20px"
+                            android:text="Rol:" />
+
+                        <TextView
+                            android:id="@+id/itemRole"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="A" />
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/changeNext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="25px"
+                        android:backgroundTint="#DC7676"
+                        android:icon="@dimen/cardview_default_radius"
+                        app:iconGravity="textTop"
+                        app:icon="@drawable/ic_baseline_delete_24">
+
+                    </Button>
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -78,7 +78,7 @@ public class AdminScreen extends AppCompatActivity {
                         //  Toast.makeText(getApplicationContext(), "hay datos en users"+cil.getId(), Toast.LENGTH_SHORT).show();
                     }
                     System.out.println("Lista Usuarios"+listUsers);
-                    AdaptadorDatos adaptadorDatos = new AdaptadorDatos(listUsers, AdminScreen.this);
+                    AdaptadorDatosAdmin adaptadorDatos = new AdaptadorDatosAdmin(listUsers, AdminScreen.this);
                     recyclerView.setAdapter(adaptadorDatos);
                 }
             }
