@@ -6,7 +6,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -27,6 +29,7 @@ public class AdminScreen extends AppCompatActivity {
     TextView lastNameUser;
     TextView emailUser;
     Ciclista userMainApp;
+    Button newAdd;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,15 +39,19 @@ public class AdminScreen extends AppCompatActivity {
         nameUser = findViewById(R.id.itemName2);
         lastNameUser = findViewById(R.id.itemLastName2);
         emailUser = findViewById(R.id.itemEmail2);
+        newAdd = findViewById(R.id.addAdmin);
 
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         getUsersDataBase();
 
+        newAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                changeThePage();
+            }
+        });
     }
-
-
-
 
     public void getUsersDataBase() {
         database = FirebaseDatabase.getInstance();
@@ -82,6 +89,9 @@ public class AdminScreen extends AppCompatActivity {
         });
     }
 
-
+    public void changeThePage(){
+        Intent iniciar = new Intent(this, RegisterAdminActivity.class);
+        startActivity(iniciar);
+    }
 
 }
