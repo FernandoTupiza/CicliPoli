@@ -4,7 +4,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -13,7 +12,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -25,8 +23,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
-import java.util.Timer;
-import java.util.TimerTask;
 
 public class LoginScreen extends AppCompatActivity {
     private EditText email;
@@ -94,6 +90,10 @@ public class LoginScreen extends AppCompatActivity {
         Intent irRegistro = new Intent(this, RegisterActivity.class);
         startActivity(irRegistro);
     }
+    public void IrAdmin(){
+        Intent irAdmin = new Intent(this, AdminScreen.class);
+        startActivity(irAdmin);
+    }
 
     public void roleUser(String userid) {
         database = FirebaseDatabase.getInstance();
@@ -109,6 +109,7 @@ public class LoginScreen extends AppCompatActivity {
                     System.out.println("Cil::::"+cil.toString());
                         if(cil.getRole().equals("A")){
                             System.out.println("Administrador usuario");
+                            IrAdmin();
 
                         }else if(cil.getRole().equals("C")){
                             System.out.println("Ciclista usuario");

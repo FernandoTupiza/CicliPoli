@@ -169,16 +169,11 @@ public class UsersScreen extends AppCompatActivity {
                         }
 
                         //  Toast.makeText(getApplicationContext(), "hay datos en users"+cil.getId(), Toast.LENGTH_SHORT).show();
-
                     }
                     AdaptadorDatos adaptadorDatos = new AdaptadorDatos(listUsers, UsersScreen.this);
                     recyclerView.setAdapter(adaptadorDatos);
                 }
-
-
             }
-
-
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
