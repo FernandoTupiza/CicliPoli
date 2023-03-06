@@ -50,7 +50,6 @@ public class AdaptadorDatos  extends RecyclerView.Adapter<AdaptadorDatos.ViewHol
             lastName=itemView.findViewById(R.id.itemLastName);
             email =itemView.findViewById(R.id.itemEmail);
             changePage=itemView.findViewById(R.id.changeNext);
-
         }
 
         public void asigarDatos(UserCiclista userCiclista) {
