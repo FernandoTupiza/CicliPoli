@@ -99,22 +99,6 @@
                 app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonLastName" />
 
             <Button
-                android:id="@+id/button2"
-                android:layout_width="300dp"
-                android:layout_height="48dp"
-                android:layout_marginBottom="75px"
-                android:textSize="18sp"
-                android:backgroundTint="@color/purple"
-                app:cornerRadius="10dp"
-                android:layout_marginVertical="20dp"
-                android:onClick="IrLoginAct"
-                android:text="@string/txt_button_login"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <Button
                 android:id="@+id/buttonRegistro"
                 android:layout_width="300dp"
                 android:layout_height="48dp"
@@ -124,12 +108,28 @@
                 app:cornerRadius="10dp"
                 android:layout_marginVertical="20dp"
                 android:onClick="IrTabs"
-                android:text="@string/txt_btRegistrarse"
+                android:text="Registrar"
                 app:layout_constraintBottom_toTopOf="@+id/button2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2"
                 app:layout_constraintVertical_bias="0.857" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="300dp"
+                android:layout_height="48dp"
+                android:layout_marginVertical="20dp"
+                android:layout_marginBottom="75px"
+                android:backgroundTint="@color/purple"
+                android:onClick="IrLoginAct"
+                android:text="Regresar"
+                android:textSize="18sp"
+                app:cornerRadius="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 

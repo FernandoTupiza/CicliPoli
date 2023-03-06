@@ -6,10 +6,13 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -26,7 +29,9 @@ public class AdminScreen extends AppCompatActivity {
     TextView nameUser;
     TextView lastNameUser;
     TextView emailUser;
+    Button signOut;
     Ciclista userMainApp;
+    Button newAdd;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,15 +41,31 @@ public class AdminScreen extends AppCompatActivity {
         nameUser = findViewById(R.id.itemName2);
         lastNameUser = findViewById(R.id.itemLastName2);
         emailUser = findViewById(R.id.itemEmail2);
+        newAdd = findViewById(R.id.addAdmin);
+        signOut = findViewById(R.id.signOut);
 
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         getUsersDataBase();
 
+        newAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                changeThePage();
+            }
+        });
+
+        signOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FirebaseAuth.getInstance().signOut();
+                Intent intent = new Intent(AdminScreen.this, LoginScreen.class);
+                startActivity(intent);
+
+
+            }
+        });
     }
-
-
-
 
     public void getUsersDataBase() {
         database = FirebaseDatabase.getInstance();
@@ -71,7 +92,7 @@ public class AdminScreen extends AppCompatActivity {
                         //  Toast.makeText(getApplicationContext(), "hay datos en users"+cil.getId(), Toast.LENGTH_SHORT).show();
                     }
                     System.out.println("Lista Usuarios"+listUsers);
-                    AdaptadorDatos adaptadorDatos = new AdaptadorDatos(listUsers, AdminScreen.this);
+                    AdaptadorDatosAdmin adaptadorDatos = new AdaptadorDatosAdmin(listUsers, AdminScreen.this);
                     recyclerView.setAdapter(adaptadorDatos);
                 }
             }
@@ -82,6 +103,9 @@ public class AdminScreen extends AppCompatActivity {
         });
     }
 
-
+    public void changeThePage(){
+        Intent iniciar = new Intent(this, RegisterAdminActivity.class);
+        startActivity(iniciar);
+    }
 
 }
